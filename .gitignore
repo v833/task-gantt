@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.vscode
+*-old
+
+yarn-*
+*-lock.json
+yarn.lock
+coverage
+
+.cz-config.js
+_v1

@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "baseUrl": ".",
+    "allowJs": true,
+    "types": [
+      "node",
+    ],
+    "typeRoots": [
+      "./types",
+      "./node_moudles/@types/",
+      "./src/typings"
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "components/*": [
+        "./src/components/*"
+      ],
+      "styles/*": [
+        "./src/styles/*"
+      ],
+      "utils/*": [
+        "./src/utils/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/components/**/*.vue",
+    "src/pages/**/*.vue",
+    "types/**/*.d.ts",
+    "demo/demo.vue",
+    "demo/debug.vue",
+    "demo/components/*.vue",
+    "demo/*.ts",
+    "tests/**/*.spec.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/old/**",
+    "demo/App.vue"
+  ]
+}

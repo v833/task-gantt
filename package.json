@@ -1,0 +1,102 @@
+{
+  "name": "task-gantt",
+  "license": "MIT",
+  "private": false,
+  "version": "1.3.5",
+  "preview": false,
+  "files": [
+    "dist",
+    "types",
+    "src",
+    "package.json"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.mjs",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.umd.js"
+    },
+    "./dist/index.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    },
+    "./dist/style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    },
+    "./index.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "serve": "vite preview",
+    "build": "vite build",
+    "build:debug": "vue-tsc --noEmit && vite build --debug",
+    "dts": "vue-tsc --declaration --emitDeclarationOnly --declarationDir ./types",
+    "cz": "git-cz",
+    "release": "standard-version",
+    "lint": "eslint src/**/*.{vue,js,ts,jsx,tsx} --fix",
+    "lint:test": "lint-staged",
+    "lint:create": "eslint --init",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
+    "prepare": "husky install",
+    "push": "git push --follow-tags origin master"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx}": "eslint --fix"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.0.0",
+    "@vueuse/integrations": "^10.1.2",
+    "dayjs": "^1.11.7",
+    "lodash": "^4.17.21",
+    "sortablejs": "^1.15.0"
+  },
+  "devDependencies": {
+    "vite-plugin-vue-inspector": "^4.0.2",
+    "@changesets/cli": "^2.26.1",
+    "@types/lodash": "^4.14.192",
+    "@types/sortablejs": "^1.15.1",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vitest/coverage-istanbul": "^0.31.1",
+    "@vue/test-utils": "^2.3.2",
+    "cz-git": "^1.6.1",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.10.0",
+    "happy-dom": "^9.18.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
+    "sass": "^1.61.0",
+    "standard-version": "^9.5.0",
+    "typescript": "*",
+    "vite": "4.5.2",
+    "vite-plugin-eslint": "^1.8.1",
+    "vitest": "^0.31.1",
+    "vue": "3.3.13",
+    "vue-tsc": "^1.2.0"
+  },
+  "standard-version": {
+    "scripts": {
+      "pretag": "bash ./scripts/update-doc.sh"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}

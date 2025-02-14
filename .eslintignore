@@ -1,0 +1,13 @@
+node_modules
+dist
+coverage
+scripts
+sundry
+
+demo/App.vue
+.eslintrc.js
+*.js
+tests
+*.config.js
+
+src/_v1
